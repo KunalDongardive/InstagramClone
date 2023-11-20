@@ -1,0 +1,107 @@
+.signIn {
+  height: 98vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signIn .card {
+  width: 300px;
+  height: 350px;
+  border: 1px solid rgb(221, 221, 221);
+  padding: 10px 20px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.signIn .card .top {
+  width: 100%;
+}
+
+.signIn .card .top input {
+  width: inherit;
+  padding: 10px 0px;
+  text-indent: 10px;
+  border: 1px solid #dbdbdb;
+  background-color: #fafafa;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+
+.signIn .card .top button {
+  margin-top: 20px;
+  width: inherit;
+  font-size: 14px;
+  padding: 8px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0095f6;
+  color: #ffff;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.signIn .card .center {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  align-items: center;
+  margin-top: 20px;
+  color: #8e8e8e;
+}
+
+.signIn .card .center .line {
+  height: 1px;
+  width: 40%;
+  background-color: rgb(209, 209, 209);
+}
+
+.signIn .card .bottom .fbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signIn .option {
+  height: 50px;
+  width: 300px;
+  border: 1px solid rgb(224, 224, 224);
+  margin: 10px 0px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.signIn .otherApps {
+  text-align: center;
+  width: 280px;
+}
+
+.signIn .otherApps p {
+  font-size: 15px;
+}
+
+.signIn .otherApps .storeImg {
+  display: flex;
+  justify-content: space-around;
+}
+
+.signIn .footer {
+  bottom: 50px;
+  text-align: center;
+  color: #8e8e8e;
+  font-size: 13px;
+  position: absolute;
+}
+
+.signIn .footer ul {
+  text-align: center;
+}
+
+.signIn .footer ul li {
+  display: inline;
+  margin: 0px 5px;
+}

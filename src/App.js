@@ -1,4 +1,6 @@
 import "./App.css";
+// import StoriesPosts from "./components/stories/StoriesPosts";
+// import MenuBar from "./components/menuBar/MenuBar";
 import HomePage from "./pages/homePage/HomePage";
 // import SignIn from "./pages/signIn/SignIn";
 // import SignUp from "./pages/signUp/SignUp";
@@ -12,6 +14,8 @@ function App() {
       {/* <SignUp /> */}
       {/* <SignIn /> */}
       <HomePage />
+      {/* <MenuBar /> */}
+      {/* <StoriesPosts /> */}
     </div>
   );
 }

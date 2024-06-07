@@ -1,0 +1,156 @@
+.home {
+  height: auto;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0%;
+}
+
+.home .page {
+  display: flex;
+}
+
+.home .page .menuBar {
+  position: fixed;
+  height: 99vh;
+  width: 15%;
+  border-right: 1px solid rgba(225, 225, 225, 0.799);
+  padding: 0px 20px;
+}
+
+.home .page .menuBar .logo h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.home .page .menuBar .menu {
+  margin-top: 50px;
+}
+
+.home .page .menuBar .menu .menuItem,
+.menu-2 .menuItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.home .page .menuBar .menu-2 {
+  position: absolute;
+  bottom: 30px;
+  font-size: 18px;
+}
+
+.home .page .container {
+  display: flex;
+  width: 85%;
+  padding: 1rem 35rem;
+  gap: 15rem;
+}
+
+.home .page .stories-Posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home .page .stories-Posts .stories {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.home .page .stories-Posts .stories .profile {
+  padding: 0.5rem 0.5rem;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.home .page .stories-Posts .posts {
+  height: 42rem;
+  width: 28rem;
+  margin-bottom: 10px;
+}
+
+.home .page .stories-Posts .posts .top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+}
+
+.home .page .stories-Posts .posts .top .topLeft {
+  display: flex;
+  align-items: center;
+}
+
+.home .page .stories-Posts .posts .top .topLeft .userName {
+  display: flex;
+  padding: 0rem 0.5rem;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.home .page .stories-Posts .posts .center {
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgba(223, 223, 223, 0.866);
+}
+
+.home .page .stories-Posts .posts .bottom {
+  padding: 0.5rem 1rem;
+}
+
+.home .page .stories-Posts .posts .bottom .options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  align-items: center;
+}
+
+.home .page .stories-Posts .posts .bottom .options .optionsLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home .page .stories-Posts .posts .bottom .caption .summary {
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 15px;
+  margin-bottom: 0.2rem;
+}
+
+.home .page .stories-Posts .posts .bottom .caption .viewComment {
+  padding: 0.3rem 0rem;
+  color: rgb(111, 111, 111);
+  font-size: 15px;
+}
+
+.home .page .stories-Posts .posts .bottom .caption .addComment textarea {
+  background-color: inherit;
+  border: none;
+  resize: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+}
+
+.home .page .container .suggestions {
+  display: flex;
+  justify-content: space-between;
+  top: 2%;
+  right: 5%;
+  width: 360px;
+  height: 50px;
+  align-items: center;
+  padding: 0.7rem 1rem;
+}
+
+.home .page .container .suggestions .suggLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

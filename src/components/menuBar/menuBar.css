@@ -1,0 +1,34 @@
+.menuBar {
+  position: fixed;
+  height: 99vh;
+  width: 15%;
+  border-right: 1px solid rgba(225, 225, 225, 0.799);
+  padding: 0px 20px;
+}
+
+.menuBar .logo h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.menuBar .menu {
+  margin-top: 50px;
+}
+
+.menuBar .menu .menuItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menuBar .menu-2 {
+  position: absolute;
+  bottom: 30px;
+  font-size: 18px;
+}
+
+.menuBar .menu-2 .menuItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}

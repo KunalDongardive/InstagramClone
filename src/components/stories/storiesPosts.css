@@ -1,0 +1,95 @@
+.stories-Posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
+.stories-Posts .stories {
+  display: flex;
+}
+
+.stories-Posts .stories .profile {
+  padding: 1rem 0.5rem 2rem 0.5rem;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.stories-Posts .posts {
+  height: 42rem;
+  width: 28rem;
+  border: 1px solid rgb(44, 44, 44);
+  margin-bottom: 10px;
+}
+
+.stories-Posts .posts .top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+}
+
+.stories-Posts .posts .top .left {
+  display: flex;
+  align-items: center;
+}
+
+.stories-Posts .posts .top .left .userName {
+  display: flex;
+  padding: 0rem 0.5rem;
+  justify-content: center;
+}
+.stories-Posts .posts .top .left .userName > * {
+  margin: 0.2rem;
+}
+
+.stories-Posts .posts .center {
+  display: flex;
+  justify-content: center;
+}
+
+.stories-Posts .posts .bottom {
+  padding: 0.5rem 1rem;
+}
+
+.stories-Posts .posts .bottom .options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  align-items: center;
+}
+
+.stories-Posts .posts .bottom .options .left {
+  display: flex;
+  align-items: center;
+}
+
+.stories-Posts .posts .bottom .options .left > * {
+  margin-right: 1rem;
+}
+
+.stories-Posts .posts .bottom .caption .summary {
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 15px;
+  margin-bottom: 0.2rem;
+}
+
+.stories-Posts .posts .bottom .caption .viewComment {
+  padding: 0.3rem 0rem;
+  color: rgb(111, 111, 111);
+  font-size: 15px;
+}
+
+.stories-Posts .posts .bottom .caption .addComment textarea {
+  background-color: inherit;
+  border: none;
+  resize: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+}

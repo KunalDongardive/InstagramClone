@@ -1,6 +1,7 @@
 import "./App.css";
-import Search from "./components/search/Search";
-
+import Reels from "./components/reels/Reels";
+// import Feed from "./components/feed/Feed";
+// import Search from "./components/search/Search";
 // import HomePage from "./pages/homePage/HomePage";
 // import SignIn from "./pages/signIn/SignIn";
 // import SignUp from "./pages/signUp/SignUp";
@@ -11,7 +12,9 @@ function App() {
       {/* <SignUp /> */}
       {/* <SignIn /> */}
       {/* <HomePage /> */}
-      <Search />
+      {/* <Search /> */}
+      {/* <Feed /> */}
+      <Reels />
     </div>
   );
 }

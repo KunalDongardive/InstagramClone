@@ -6,8 +6,6 @@
 
 .reels .reelContainer {
   position: relative;
-  /* width: 380px;
-  height: 640px; */
 }
 
 .reels .reelContainer .video-container {
@@ -98,4 +96,22 @@
 
 .music {
   font-size: 12px;
+}
+
+.reels .options {
+  display: flex;
+  flex-direction: column;
+  margin: 520px 0px 0px 30px;
+}
+
+.reels .options span > * {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.reels .options .option p > * {
+  font-size: 10px;
 }

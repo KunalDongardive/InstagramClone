@@ -1,5 +1,11 @@
 import React from "react";
 import "./reels.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
+import { faComment } from "@fortawesome/free-regular-svg-icons";
+import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
 const Reels = () => {
   return (
@@ -40,22 +46,34 @@ const Reels = () => {
           </div>
         </div>
       </div>
-      <div className="likes">
-        <span className="icon">❤️</span>
-        <span>Likes</span>
-      </div>
-      <div className="comments">
-        <span className="icon">💬</span>
-        <span>8,200</span>
-      </div>
-      <div className="share">
-        <span className="icon">✈️</span>
-      </div>
-      <div className="save">
-        <span className="icon">📑</span>
-      </div>
-      <div className="more">
-        <span className="icon">...</span>
+      <div className="options">
+        <div className="option">
+          <span className="icon">
+            <FontAwesomeIcon icon={faHeart} />
+          </span>
+          <p>Likes</p>
+        </div>
+        <div className="option">
+          <span className="icon">
+            <FontAwesomeIcon icon={faComment} />
+          </span>
+          <p>100</p>
+        </div>
+        <div className="share">
+          <span className="icon">
+            <FontAwesomeIcon icon={faPaperPlane} />
+          </span>
+        </div>
+        <div className="save">
+          <span className="icon">
+            <FontAwesomeIcon icon={faBookmark} />
+          </span>
+        </div>
+        <div className="more">
+          <span className="icon">
+            <FontAwesomeIcon icon={faEllipsis} />
+          </span>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import "./App.css";
-import Reels from "./components/reels/Reels";
+import Massages from "./components/massages/Massages";
+// import Reels from "./components/reels/Reels";
 // import Feed from "./components/feed/Feed";
 // import Search from "./components/search/Search";
 // import HomePage from "./pages/homePage/HomePage";
@@ -14,7 +15,8 @@ function App() {
       {/* <HomePage /> */}
       {/* <Search /> */}
       {/* <Feed /> */}
-      <Reels />
+      {/* <Reels /> */}
+      <Massages />
     </div>
   );
 }

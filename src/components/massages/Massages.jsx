@@ -18,24 +18,6 @@ const Massages = () => {
 
   return (
     <div className="massages">
-      <div className="header">
-        <div className="left">
-          <img
-            src="https://www.instagram.com/static/images/ico/instagram_logo.png/1AB6D787.png"
-            alt="Instagram Logo"
-          />
-        </div>
-        <div className="middle">
-          <input type="text" placeholder="Search" />
-        </div>
-        <div className="right">
-          <img src="" alt="Direct Message" />
-          <img src="" alt="Reel" />
-          <img src="" alt="Explore" />
-          <img src="" alt="Activity" />
-        </div>
-      </div>
-
       <div className="main">
         <div className="sidebar">
           <div className="user">
@@ -142,13 +124,6 @@ const Massages = () => {
             <img src="" alt="Heart" />
           </div>
         </div>
-      </div>
-      <div className="footer">
-        <img src="" alt="Home" />
-        <img src="" alt="Search" />
-        <img src="" alt="Direct Message" />
-        <img src="" alt="Reel" />
-        <img src="" alt="Profile" />
       </div>
     </div>
   );

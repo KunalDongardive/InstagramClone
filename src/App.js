@@ -1,5 +1,6 @@
 import "./App.css";
-import Notification from "./components/notifications/Notification";
+import Profile from "./components/profile/Profile";
+// import Notification from "./components/notifications/Notification";
 // import Massages from "./components/massages/Massages";
 // import Reels from "./components/reels/Reels";
 // import Feed from "./components/feed/Feed";
@@ -18,7 +19,8 @@ function App() {
       {/* <Feed /> */}
       {/* <Reels /> */}
       {/* <Massages /> */}
-      <Notification />
+      {/* <Notification /> */}
+      <Profile />
     </div>
   );
 }

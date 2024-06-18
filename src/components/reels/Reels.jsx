@@ -11,7 +11,7 @@ const Reels = () => {
   return (
     <div className="reels">
       <div className="reelContainer">
-        <div className="video-container">
+        <div className="videoContainer">
           <video className="video">
             <source
               src="https://www.instagram.com/reel/C6-WXJgvmEU/?utm_source=ig_web_copy_link"
@@ -33,12 +33,10 @@ const Reels = () => {
                 }}
               />
               <span>kunal</span>
-              <button className="follow-button">Follow</button>
+              <button className="followBtn">Follow</button>
             </div>
           </div>
           <div className="title">
-            <h2>Anokha Gadget 😄</h2>
-            <h2>Alien life 👽</h2>
             <p>
               Wait for end 🤔🤭... <span>more</span>
             </p>
@@ -48,31 +46,21 @@ const Reels = () => {
       </div>
       <div className="options">
         <div className="option">
-          <span className="icon">
-            <FontAwesomeIcon icon={faHeart} />
-          </span>
+          <FontAwesomeIcon icon={faHeart} />
           <p>Likes</p>
         </div>
         <div className="option">
-          <span className="icon">
-            <FontAwesomeIcon icon={faComment} />
-          </span>
+          <FontAwesomeIcon icon={faComment} />
           <p>100</p>
         </div>
-        <div className="share">
-          <span className="icon">
-            <FontAwesomeIcon icon={faPaperPlane} />
-          </span>
+        <div className="option" style={{ marginBottom: "15px" }}>
+          <FontAwesomeIcon icon={faPaperPlane} />
         </div>
-        <div className="save">
-          <span className="icon">
-            <FontAwesomeIcon icon={faBookmark} />
-          </span>
+        <div className="option" style={{ marginBottom: "10px" }}>
+          <FontAwesomeIcon icon={faBookmark} />
         </div>
-        <div className="more">
-          <span className="icon">
-            <FontAwesomeIcon icon={faEllipsis} />
-          </span>
+        <div className="option">
+          <FontAwesomeIcon icon={faEllipsis} />
         </div>
       </div>
     </div>

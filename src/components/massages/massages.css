@@ -1,178 +1,135 @@
 .massages {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: #fff;
-  }
-  
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .header img {
-    height: 24px;
-  }
-  
-  .header input {
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    font-size: 14px;
-    outline: none;
-  }
-  
-  .main {
-    display: flex;
-    flex-grow: 1;
-  }
-  
-  .sidebar {
-    width: 250px;
-    padding: 20px;
-    background-color: #fff;
-    border-right: 1px solid #ddd;
-  }
-  
-  .user {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .user img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .user span {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .messages {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .message {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
-  }
-  
-  .message img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-  }
-  
-  .message span {
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .chat {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-color: #fff;
-  }
-  
-  .chat-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .chat-header img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .chat-header span {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .chat-body {
-    flex-grow: 1;
-    overflow-y: auto;
-  }
-  
-  .chat-input {
-    display: flex;
-    align-items: center;
-  }
-  
-  .chat-input input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    font-size: 14px;
-    outline: none;
-    margin-right: 10px;
-  }
-  
-  .chat-input button {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .chat-input button img {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .right-sidebar {
-    width: 250px;
-    padding: 20px;
-    background-color: #fff;
-  }
-  
-  .story {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
-  }
-  
-  .story img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  
-  .story span {
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-  }
-  
-  .footer img {
-    height: 24px;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 98vh;
+  background-color: #fff;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.massages .main {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  width: 85%;
+  border: 1px solid red;
+}
+
+.massages .main .sidebar {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+}
+
+.massages .main .sidebar .userSearch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.massages .main .sidebar .userSearch .userId {
+  font-size: 18px;
+  font-weight: 580;
+}
+
+.messages .main .sidebar .massageInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.messages .main .sidebar .massageInfo .massageHead {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.messages .main .sidebar .massageInfo .message {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.message img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.message span {
+  font-size: 14px;
+  color: #333;
+}
+
+.chat {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chat-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-header span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.chat-body {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  margin-right: 10px;
+}
+
+.chat-input button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.chat-input button img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.footer img {
+  height: 24px;
+}

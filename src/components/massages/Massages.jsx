@@ -44,72 +44,32 @@ const Massages = () => {
                 Requests
               </div>
             </div>
-            <div className="message">
-              <img src="./images/logo.png" alt="Direct Message" />
-              <span>Kunal Dongardive</span>
-              <span>Kunal sent an attachment.</span>
-              <span>2 h</span>
-            </div>
-            <div className="message">
-              <img src="./images/logo.png" alt="Direct Message" />
-              <span>Raj_2208</span>
-              <span>Raj_sent an attachment.</span>
-              <span>5 h</span>
-            </div>
-            <div className="message">
-              <img src="./images/logo.png" alt="Direct Message" />
-              <span>Gaurav_sonawane</span>
-              <span>Gaurav_sonawane sent an attachment.</span>
-              <span>14 h</span>
-            </div>
-            <div className="message">
-              <img src="./images/logo.png" alt="Direct Message" />
-              <span>sriniwas kumar</span>
-              <span>sriniwas sent an attachment.</span>
-              <span>14 h</span>
-            </div>
-            <div className="message">
-              <img src="./images/logo.png" alt="Direct Message" />
-              <span>Kuldeep Badgujar</span>
-              <span>Liked a message.</span>
-              <span>1 d</span>
-            </div>
-            <div className="message">
-              <img src="./images/logo.png" alt="Direct Message" />
-              <span>pradnya salunke</span>
-              <span>pradnya sent an attachment.</span>
-              <span>1 d</span>
-            </div>
-            <div className="message">
-              <img src="./images/logo.png" alt="Direct Message" />
-              <span>जय श्री महाकाल</span>
-              <span>Active now</span>
-            </div>
-            <div className="message">
-              <img src="./images/logo.png" alt="Direct Message" />
-              <span>Aditya</span>
-              <span>Reacted to your message.</span>
-              <span>4 d</span>
-            </div>
-            <div className="message">
-              <img src="./images/logo.png" alt="Direct Message" />
-              <span>विशु पाथरवट</span>
-              <span>विशु sent an attachment.</span>
-              <span>1 w</span>
+            <div className="massage">
+              <div className="proPic">
+                <img
+                  src="./images/logo.png"
+                  alt="Direct Message"
+                  style={{ height: "50px", width: "50px", borderRadius: "50%" }}
+                />
+              </div>
+              <div className="userInfo">
+                <div className="userName">User Name</div>
+                <div className="info">User sent an attachment</div>
+              </div>
             </div>
           </div>
         </div>
         <div className="chat">
-          <div className="chat-header">
+          <div className="chatHeader">
             <img src="./images/logo.png" alt="User Profile" />
-            <span>Kuldeep Badgujar</span>
+            <span>User Name</span>
           </div>
-          <div className="chat-body">
+          <div className="chatBody">
             {/* Chat messages will be displayed here */}
           </div>
           <form
             //    onSubmit={handleSubmit}
-            className="chat-input"
+            className="chatInput"
           >
             <input
               type="text"
@@ -118,7 +78,6 @@ const Massages = () => {
               //   onChange={handleChange}
             />
             <button type="submit">
-              <img src="" alt="Send" />
             </button>
           </form>
         </div>

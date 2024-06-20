@@ -1,56 +1,79 @@
 import React from "react";
 import "./profile.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGear } from "@fortawesome/free-solid-svg-icons";
 
 const Profile = () => {
   return (
     <div className="profile">
-      <div className="profile-header">
-        <div className="profile-pic">
-          <img src="" alt="" />
+      <div className="profileContainer">
+        <div className="profileHeader">
+          <div className="proLeft">
+            <img src="./images/download.png" alt="" />
+          </div>
+          <div className="proRight">
+            <div className="proSetting">
+              <div className="userName">kunal_d_3</div>
+              <div className="editProfile">Edit Profile</div>
+              <div className="editProfile">View archive</div>
+              <div className="setting">
+                <FontAwesomeIcon icon={faGear} />
+              </div>
+            </div>
+            <div className="profileInfo">
+              <div className="followers">
+                <h4>26</h4> posts
+              </div>
+              <div className="followers">
+                <h4>361</h4> followers
+              </div>
+              <div className="followers">
+                <h4>270</h4> following
+              </div>
+            </div>
+            <div className="about">
+              <div className="name">Kᵘⁿᵃˡ</div>
+              <div
+                className="bio"
+                style={{ marginTop: "-12px", textOverflow: "ellipsis" }}
+              >
+                <p>
+                  The Buddha's teachings are simple but profound, and they offer
+                  <br />
+                  us a path to happiness and peace.
+                </p>
+                <p style={{ marginTop: "-10px" }}>XXIV•V•MMII</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="profile-info">
-          <h3>kunal_d_3</h3>
-          <div className="profile-stats">
-            <span>26 posts</span>
-            <span>362 followers</span>
-            <span>275 following</span>
-          </div>
-          <p>Kunal</p>
-          <p>
-            The Buddha's teachings are simple but profound, and they offer us a
-            path to happiness and peace.
-          </p>
-          <p>XXIV.V MMII</p>
-        </div>
-        <div className="profile-actions">
-          <button>Edit Profile</button>
-          <button>View Archive</button>
-          <span className="settings-icon">⚙️</span>
-        </div>
-      </div>
-      <div className="profile-content">
-        <div className="content-tabs">
-          <button className="active">POSTS</button>
-          <button>SAVED</button>
-          <button>TAGGED</button>
-        </div>
-        <div className="post-grid">
-          <div className="post-item">
+        <div className="line"></div>
+        <div className="postGrid">
+          <div className="post1">
             <img src="" alt="" />
           </div>
-          <div className="post-item">
+          <div className="post1">
             <img src="" alt="" />
           </div>
-          <div className="post-item">
+          <div className="post1">
             <img src="" alt="" />
           </div>
-          <div className="post-item">
+          <div className="post2">
             <img src="" alt="" />
           </div>
-          <div className="post-item">
+          <div className="post2">
             <img src="" alt="" />
           </div>
-          <div className="post-item">
+          <div className="post2">
+            <img src="" alt="" />
+          </div>
+          <div className="post3">
+            <img src="" alt="" />
+          </div>
+          <div className="post3">
+            <img src="" alt="" />
+          </div>
+          <div className="post3">
             <img src="" alt="" />
           </div>
         </div>

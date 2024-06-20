@@ -1,83 +1,79 @@
-.notifications-container {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .notifications-title {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .notifications-section {
-    margin-bottom: 20px;
-  }
-  
-  .section-title {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .notification {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
-  }
-  
-  .notification-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
-  }
-  
-  .notification-content {
-    flex: 1;
-    font-size: 0.9em;
-    color: #333;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  .notification-profile-pic {
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
-    border-radius: 50%;
-  }
-  
-  .notification-profile-pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  
-  .notification-image {
-    width: 50px;
-    height: 50px;
-    margin-left: 15px;
-    border-radius: 5px;
-  }
-  
-  .notification-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-  }
-  
-  .follow-button {
-    background-color: #1877F2;
-    color: #fff;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 0.9em;
-    cursor: pointer;
-  }
+.notification {
+  height: 99vh;
+  width: 18%;
+  border: 1px solid rgb(237, 237, 237);
+  margin: 0px;
+}
+
+.notification .line {
+  height: 1px;
+  background-color: rgba(212, 210, 210, 0.491);
+  margin: 20px 0px;
+}
+
+.notification .thisWeek .week {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.notification .thisWeek .week .proPic {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notification .thisWeek .week .proPic img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.notification .thisWeek .week .info .userName {
+  font-size: 18px;
+  font-weight: 550;
+}
+
+.notification .thisWeek button {
+  padding: 8px 20px;
+  background-color: rgb(54, 103, 252);
+  color: white;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+.notification .thisMonth .month {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.notification .thisMonth .month .proPic {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notification .thisMonth .month .proPic img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.notification .thisMonth .month .info .userName {
+  font-size: 18px;
+  font-weight: 550;
+}
+
+.notification .thisMonth img {
+  height: 50px;
+  width: 50px;
+}

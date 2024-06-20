@@ -3,7 +3,14 @@ import React from "react";
 import "./massages.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import { faExclamation } from "@fortawesome/free-solid-svg-icons";
+import { faFaceSmile } from "@fortawesome/free-solid-svg-icons";
+import { faMicrophone } from "@fortawesome/free-solid-svg-icons";
+import { faImage } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const Massages = () => {
   //   const [message, setMessage] = useState("");
@@ -61,25 +68,33 @@ const Massages = () => {
         </div>
         <div className="chat">
           <div className="chatHeader">
-            <img src="./images/logo.png" alt="User Profile" />
-            <span>User Name</span>
+            <div className="profile">
+              <img src="./images/logo.png" alt="User Profile" />
+              <span>User Name</span>
+            </div>
+            <div className="callOption">
+              <div className="audio">
+                <FontAwesomeIcon icon={faPhone} />
+              </div>
+              <div className="video">
+                <FontAwesomeIcon icon={faVideo} />
+              </div>
+              <div className="information">
+                <FontAwesomeIcon icon={faExclamation} />
+              </div>
+            </div>
           </div>
           <div className="chatBody">
             {/* Chat messages will be displayed here */}
           </div>
-          <form
-            //    onSubmit={handleSubmit}
-            className="chatInput"
-          >
-            <input
-              type="text"
-              placeholder="Message..."
-              //   value={message}
-              //   onChange={handleChange}
-            />
-            <button type="submit">
-            </button>
-          </form>
+          <div className="chatInput">
+            <FontAwesomeIcon icon={faFaceSmile} />
+            <input type="text" placeholder="Message..." />
+            <FontAwesomeIcon icon={faMicrophone} />
+            <FontAwesomeIcon icon={faImage} />
+            <FontAwesomeIcon icon={faHeart} />
+            {/* <button type="submit">Send</button> */}
+          </div>
         </div>
       </div>
     </div>

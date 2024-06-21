@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  border: 1px solid black;
 }
 
 .profile .profileContainer {
@@ -69,7 +68,8 @@
 .profile .profileContainer .postGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 20px;
+  padding: 15px;
+  gap: 5px;
 }
 
 .post1,

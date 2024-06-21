@@ -1,5 +1,6 @@
 import "./App.css";
-import Profile from "./components/profile/Profile";
+import Create from "./components/create/Create";
+// import Profile from "./components/profile/Profile";
 // import Notification from "./components/notifications/Notification";
 // import Massages from "./components/massages/Massages";
 // import Reels from "./components/reels/Reels";
@@ -20,7 +21,8 @@ function App() {
       {/* <Reels /> */}
       {/* <Massages /> */}
       {/* <Notification /> */}
-      <Profile />
+      {/* <Profile /> */}
+      <Create />
     </div>
   );
 }

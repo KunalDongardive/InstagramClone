@@ -16,23 +16,21 @@ const Create = () => {
   };
   return (
     <div className="create">
-      <div className="post-container">
-        <div className="post-header">
-          <h2>Create new post</h2>
+      <div className="createHead">
+        <h2>Create new post</h2>
+      </div>
+      <div className="postBody">
+        <div className="upload">
+          {image ? (
+            <img src={image} alt="Uploaded" />
+          ) : (
+            <div className="upload-icon">
+              <FontAwesomeIcon icon={faPhotoFilm} />
+              <span>Drag photos and videos here</span>
+            </div>
+          )}
         </div>
-        <div className="post-body">
-          <div className="image-container">
-            {image ? (
-              <img src={image} alt="Uploaded" />
-            ) : (
-              <div className="upload-icon">
-                <FontAwesomeIcon icon={faPhotoFilm} />
-                <span>Drag photos and videos here</span>
-              </div>
-            )}
-          </div>
-          <input type="file" accept="image/*" onChange={handleImageUpload} />
-        </div>
+        <input type="file" accept="image/*" onChange={handleImageUpload} />
       </div>
     </div>
   );

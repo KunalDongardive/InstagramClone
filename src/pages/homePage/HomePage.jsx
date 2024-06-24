@@ -9,7 +9,7 @@ import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faSquarePlus } from "@fortawesome/free-regular-svg-icons";
 import { faThreads } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-
+import Search from "../../components/search/Search";
 import "./homePage.css";
 import Post from "../../components/post/Post";
 
@@ -56,6 +56,7 @@ const HomePage = () => {
         </div>
         <div className="container">
           <Post />
+         
         </div>
       </div>
       <div className="footer"></div>

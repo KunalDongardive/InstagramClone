@@ -1,13 +1,13 @@
 .profile {
   height: auto;
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .profile .profileContainer {
-  width: 65%;
+  width: 60%;
   border: 1px solid black;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .profile .profileContainer .profileHeader .proRight {
-    margin-left: 150px;
+  margin-left: 150px;
 }
 
 .profile .profileContainer .profileHeader .proRight .proSetting {
@@ -68,11 +68,10 @@
 .profile .profileContainer .postGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 15px;
   gap: 5px;
 }
 
-.post1,
+.profile .profileContainer .postGrid .post1,
 .post2,
 .post3 {
   border: 1px solid black;

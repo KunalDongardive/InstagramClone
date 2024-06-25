@@ -8,10 +8,11 @@
 
 .home .page {
   display: flex;
+  width: 100%;
 }
 
 .home .page .menuBar {
-  position: sticky;
+  position: fixed;
   height: 99vh;
   width: 15%;
   border-right: 1px solid rgba(225, 225, 225, 0.799);
@@ -38,8 +39,51 @@
   position: absolute;
   bottom: 30px;
   font-size: 18px;
+  display: flex;
+  flex-direction: column;
 }
+
+.home .page .menuBar .menu .menuItem p,
+.menu-2 .menuItem p {
+  font-size: 18px;
+}
+
+.home .page .menuBar2 {
+  position: fixed;
+  height: 99vh;
+  width: 1.5%;
+  border-right: 1px solid rgba(225, 225, 225, 0.799);
+  padding: 10px 20px;
+}
+
+.home .page .menuBar2 .menu {
+  margin-top: 72px;
+}
+
+.home .page .menuBar2 .menu .menuItem {
+  font-size: 25px;
+  color: inherit;
+}
+
+.home .page .menuBar2 .menu .menuItem > * {
+  margin: 10px 0px;
+}
+
+.home .page .menuBar2 .menu-2 {
+  position: absolute;
+  bottom: 30px;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home .page .menuBar2 .menu-2 .menuItem {
+  margin-bottom: 40px;
+}
+
 .home .page .container {
   width: 85%;
   display: flex;
+  margin-left: 17.5%;
+  flex: 1;
 }

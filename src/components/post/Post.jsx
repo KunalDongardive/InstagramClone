@@ -105,7 +105,7 @@ const Post = () => {
         </div>
       </div>
       <div className="suggestions">
-        <div className="suggLeft">
+        <div className="suggestLeft">
           <div className="profile">
             <img
               src="./images/own.jpg"
@@ -116,9 +116,9 @@ const Post = () => {
             />
           </div>
           <div className="userName">
-            <div className="origin">
-              <div className="ame">kunal_d_3</div>
-              <div className="origin">Kunal Dongardive</div>
+            <div className="userid">kunal_d_3</div>
+            <div className="name">
+              KunalDongardive
             </div>
           </div>
         </div>

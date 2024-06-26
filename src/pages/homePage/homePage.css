@@ -81,9 +81,166 @@
   margin-bottom: 40px;
 }
 
+.home .page .dropBox {
+  position: absolute;
+  bottom: 9%;
+  left: 1%;
+  background-color: #fff;
+  border: 1px solid #cccccc7a;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.115);
+  height: 325px;
+  width: 300px;
+  z-index: 1000;
+}
+
+.home .page .dropBox .line {
+  height: 5px;
+  background-color: rgb(236, 236, 236);
+  margin: 5px 0px;
+}
+
+.home .page .dropBox .line2 {
+  height: 1px;
+  background-color: rgb(236, 236, 236);
+  margin: 1px 0px;
+}
+
+.home .page .dropBox .drop-item {
+  padding: 13px 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 380;
+  font-size: 15px;
+  margin-top: 1px;
+}
+
+.home .page .dropBox .drop-item:hover {
+  background-color: #f0f0f0;
+}
+
 .home .page .container {
   width: 85%;
   display: flex;
   margin-left: 17.5%;
   flex: 1;
+}
+
+.home .page .post {
+  height: auto;
+  width: 100%;
+  display: flex;
+  gap: 15rem;
+  justify-content: center;
+  padding: 20px 0px;
+  border: 1px solid red;
+}
+
+.home .page .post .stories-Posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home .page .post .stories-Posts .stories {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.home .page .post .stories-Posts .stories .profile {
+  padding: 0.5rem 0.5rem;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.home .page .post .stories-Posts .posts {
+  height: 42rem;
+  width: 28rem;
+  margin-bottom: 10px;
+}
+
+.home .page .post .stories-Posts .posts .top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+}
+
+.home .page .post .stories-Posts .posts .top .topLeft {
+  display: flex;
+  align-items: center;
+}
+
+.home .page .post .stories-Posts .posts .top .topLeft .userName {
+  display: flex;
+  padding: 0rem 0.5rem;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.home .page .post .stories-Posts .posts .center {
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgba(223, 223, 223, 0.866);
+}
+
+.home .page .post .stories-Posts .posts .bottom {
+  padding: 0.5rem 1rem;
+}
+
+.home .page .post .stories-Posts .posts .bottom .options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  align-items: center;
+}
+
+.home .page .post .stories-Posts .posts .bottom .options .optionsLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home .page .post .stories-Posts .posts .bottom .caption .summary {
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 15px;
+  margin-bottom: 0.2rem;
+}
+
+.home .page .post .stories-Posts .posts .bottom .caption .viewComment {
+  padding: 0.3rem 0rem;
+  color: rgb(111, 111, 111);
+  font-size: 15px;
+}
+
+.home .page .post .stories-Posts .posts .bottom .caption .addComment textarea {
+  background-color: inherit;
+  border: none;
+  resize: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+}
+
+.home .page .post .suggestions {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  height: 50px;
+  align-items: center;
+  padding: 0.7rem 1rem;
+}
+
+.home .page .post .suggestions .suggestLeft {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  line-height: 1.3;
 }

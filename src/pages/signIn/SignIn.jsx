@@ -2,16 +2,42 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 import "./signIn.css";
+import { UserContext } from "../../components/contextprovider/UserContext";
+import { useNavigate } from "react-router-dom";
+import { useState, useContext } from "react";
 
 const SignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { signin, signup } = useContext(UserContext);
+  const Navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    signin({ email, password });
+    Navigate("/home");
+  };
+
   return (
     <div className="signIn">
       <div className="card">
         <div className="top">
           <h1>𝓘𝓷𝓼𝓽𝓪𝓰𝓻𝓪𝓶</h1>
-          <input type="text" placeholder="Phone number, username or email" />
-          <input type="text" placeholder="Password" />
-          <button>Log in</button>
+          <input
+            type="text"
+            placeholder="Phone number, username or email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="text"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button onClick={handleSubmit}>Log in</button>
         </div>
         <div className="center">
           <div className="line"></div> OR <div className="line"></div>
@@ -32,7 +58,7 @@ const SignIn = () => {
       <div className="option">
         <p>
           Don't have an account?{" "}
-          <span style={{ color: "#0095f6" }}>Sign up</span>
+          <span style={{ color: "#0095f6" }} onClick={signin}>Sign up</span>
         </p>
       </div>
       <div className="otherApps">

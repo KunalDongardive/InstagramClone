@@ -7,20 +7,25 @@ import { UserContext } from "../../components/contextprovider/UserContext";
 import { useState, useContext } from "react";
 
 const SignUp = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-  const [username, setUsername] = useState("");
-  const { signup } = useContext(UserContext);
-  const Navigate = useNavigate();
+  const [userData, setuserData] = useState({
+    name: "",
+    username: "",
+    email: "",
+    password: "",
+  });
+
+  const { signup } = useContext(UserContext); // Corrected context usage
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setuserData({ ...userData, [name]: value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setPassword(passwordRef.current.value);
-    // localStorage.setItem("password", passwordRef.current.value);
-    signup({ email, password, name, username });
-    Navigate("/signIn");
-    // setUser(true);
+    signup(userData);
+    navigate("/signIn");
   };
 
   return (
@@ -43,42 +48,46 @@ const SignUp = () => {
           </div>
         </div>
         <div className="container">
-          <form>
+          <form onSubmit={handleSubmit}>
             <input
               type="text"
+              name="email"
               placeholder="Mobile Number or Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={userData.email}
+              onChange={handleChange}
               required
-            ></input>
+            />
             <input
               type="text"
+              name="name"
               placeholder="Full Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={userData.name}
+              onChange={handleChange}
               required
-            ></input>
+            />
             <input
               type="text"
+              name="username"
               placeholder="Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={userData.username}
+              onChange={handleChange}
               required
-            ></input>
+            />
             <input
               type="password"
+              name="password"
               placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              value={userData.password}
+              onChange={handleChange}
               required
-            ></input>
+            />
+            <button type="submit">Sign up</button>
           </form>
 
           <p style={{ color: "#8e8e8e" }}>
             By signing up, you agree to our <span>Terms</span>{" "}
-            <span>Privacy Policy</span> and <span>Cookies Policy .</span>
+            <span>Privacy Policy</span> and <span>Cookies Policy.</span>
           </p>
-          <button onClick={handleSubmit}>Sign up</button>
         </div>
       </div>
       <div className="option">
@@ -86,7 +95,7 @@ const SignUp = () => {
           Have an account?{" "}
           <span
             onClick={() => {
-              Navigate("/signIn");
+              navigate("/signIn");
             }}
           >
             Log in
@@ -123,7 +132,7 @@ const SignUp = () => {
           <li>Location</li>
           <li>Instagram Lite</li>
           <li>Threads</li>
-          <li>contact</li>
+          <li>Contact</li>
           <li>Uploading & Non-Users</li>
           <li>Meta Verified</li>
         </ul>

@@ -51,7 +51,7 @@
 .home .page .menuBar2 {
   position: fixed;
   height: 99vh;
-  width: 1.5%;
+  max-width: 1.5%;
   border-right: 1px solid rgba(225, 225, 225, 0.799);
   padding: 10px 20px;
 }
@@ -128,7 +128,7 @@
   flex: 1;
 }
 
-.home .page .post {
+.home .page .container .post {
   height: auto;
   width: 100%;
   display: flex;
@@ -138,18 +138,18 @@
   border: 1px solid red;
 }
 
-.home .page .post .stories-Posts {
+.home .page .container .post .stories-Posts {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.home .page .post .stories-Posts .stories {
+.home .page .container .post .stories-Posts .stories {
   display: flex;
   gap: 0.2rem;
 }
 
-.home .page .post .stories-Posts .stories .profile {
+.home .page .container .post .stories-Posts .stories .profile {
   padding: 0.5rem 0.5rem;
   text-overflow: ellipsis;
   width: 100%;
@@ -158,54 +158,81 @@
   font-size: 12px;
 }
 
-.home .page .post .stories-Posts .posts {
+.home .page .container .post .stories-Post .container .posts {
   height: 42rem;
   width: 28rem;
   margin-bottom: 10px;
 }
 
-.home .page .post .stories-Posts .posts .top {
+.home .page .container .post .stories-Post .container .posts .top {
   display: flex;
   justify-content: space-between;
   padding: 1rem 1rem;
 }
 
-.home .page .post .stories-Posts .posts .top .topLeft {
+.home .page .container .post .stories-Post .container .posts .top .topLeft {
   display: flex;
   align-items: center;
 }
 
-.home .page .post .stories-Posts .posts .top .topLeft .userName {
+.home
+  .page
+  .container
+  .post
+  .stories-Post
+  .container
+  .posts
+  .top
+  .topLeft
+  .userName {
   display: flex;
   padding: 0rem 0.5rem;
   justify-content: center;
   gap: 0.2rem;
 }
 
-.home .page .post .stories-Posts .posts .center {
+.home .page .container .post .stories-Post .container .posts .center {
   display: flex;
   justify-content: center;
   border: 1px solid rgba(223, 223, 223, 0.866);
 }
 
-.home .page .post .stories-Posts .posts .bottom {
+.home .page .container .post .stories-Post .container .posts .bottom {
   padding: 0.5rem 1rem;
 }
 
-.home .page .post .stories-Posts .posts .bottom .options {
+.home .page .container .post .stories-Post .container .posts .bottom .options {
   display: flex;
   justify-content: space-between;
   font-size: 1.3rem;
   align-items: center;
 }
 
-.home .page .post .stories-Posts .posts .bottom .options .optionsLeft {
+.home
+  .page
+  .container
+  .post
+  .stories-Posts
+  .container
+  .posts
+  .bottom
+  .options
+  .optionsLeft {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.home .page .post .stories-Posts .posts .bottom .caption .summary {
+.home
+  .page
+  .container
+  .post
+  .stories-Post
+  .container
+  .posts
+  .bottom
+  .caption
+  .summary {
   text-overflow: ellipsis;
   width: 100%;
   overflow: hidden;
@@ -214,13 +241,32 @@
   margin-bottom: 0.2rem;
 }
 
-.home .page .post .stories-Posts .posts .bottom .caption .viewComment {
+.home
+  .page
+  .container
+  .post
+  .stories-Posts
+  .container
+  .posts
+  .bottom
+  .caption
+  .viewComment {
   padding: 0.3rem 0rem;
   color: rgb(111, 111, 111);
   font-size: 15px;
 }
 
-.home .page .post .stories-Posts .posts .bottom .caption .addComment textarea {
+.home
+  .page
+  .container
+  .post
+  .stories-Posts
+  .container
+  .posts
+  .bottom
+  .caption
+  .addComment
+  textarea {
   background-color: inherit;
   border: none;
   resize: none;
@@ -229,7 +275,7 @@
   font-size: 15px;
 }
 
-.home .page .post .suggestions {
+.home .page .container .post .suggestions {
   display: flex;
   justify-content: space-between;
   width: 400px;
@@ -238,7 +284,7 @@
   padding: 0.7rem 1rem;
 }
 
-.home .page .post .suggestions .suggestLeft {
+.home .page .container .post .suggestions .suggestLeft {
   display: flex;
   gap: 0.5rem;
   align-items: center;

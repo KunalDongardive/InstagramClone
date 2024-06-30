@@ -42,6 +42,7 @@
   font-weight: bold;
   border: none;
   outline: none;
+  cursor: pointer;
   border-radius: 5px;
 }
 
@@ -64,6 +65,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .signIn .option {
@@ -72,12 +74,14 @@
   border: 1px solid rgb(224, 224, 224);
   margin: 10px 0px;
   padding: 10px 20px;
+  cursor: pointer;
   text-align: center;
 }
 
 .signIn .otherApps {
   text-align: center;
   width: 280px;
+  cursor: pointer;
 }
 
 .signIn .otherApps p {

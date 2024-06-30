@@ -135,7 +135,7 @@
   gap: 15rem;
   justify-content: center;
   padding: 20px 0px;
-  border: 1px solid red;
+  border: none;
 }
 
 .home .page .container .post .stories-Posts {

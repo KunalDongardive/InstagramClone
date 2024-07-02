@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./signUp.css";
 import { UserContext } from "../../components/contextprovider/UserContext";
 import { useState, useContext } from "react";
+import Footer from "../../components/footer/Footer";
 
 const SignUp = () => {
   const [userData, setuserData] = useState({
@@ -119,25 +120,7 @@ const SignUp = () => {
           />
         </div>
       </div>
-      <div className="footer">
-        <ul>
-          <li>Meta</li>
-          <li>About</li>
-          <li>Blog</li>
-          <li>Jobs</li>
-          <li>Help</li>
-          <li>API</li>
-          <li>Privacy</li>
-          <li>Terms</li>
-          <li>Location</li>
-          <li>Instagram Lite</li>
-          <li>Threads</li>
-          <li>Contact</li>
-          <li>Uploading & Non-Users</li>
-          <li>Meta Verified</li>
-        </ul>
-        <p>© 2023 Instagram from Meta</p>
-      </div>
+      <Footer />
     </div>
   );
 };

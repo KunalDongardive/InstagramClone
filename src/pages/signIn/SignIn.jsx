@@ -4,6 +4,7 @@ import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 import "./signIn.css";
 import { UserContext } from "../../components/contextprovider/UserContext";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../components/footer/Footer";
 
 const SignIn = () => {
   const { signin } = useContext(UserContext); // Corrected context usage
@@ -98,25 +99,7 @@ const SignIn = () => {
           />
         </div>
       </div>
-      <div className="footer">
-        <ul>
-          <li>Meta</li>
-          <li>About</li>
-          <li>Blog</li>
-          <li>Jobs</li>
-          <li>Help</li>
-          <li>API</li>
-          <li>Privacy</li>
-          <li>Terms</li>
-          <li>Location</li>
-          <li>Instagram Lite</li>
-          <li>Threads</li>
-          <li>Contact</li>
-          <li>Uploading & Non-Users</li>
-          <li>Meta Verified</li>
-        </ul>
-        <p>© 2023 Instagram from Meta</p>
-      </div>
+      <Footer />
     </div>
   );
 };

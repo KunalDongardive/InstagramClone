@@ -92,20 +92,3 @@
   display: flex;
   justify-content: space-around;
 }
-
-.signIn .footer {
-  bottom: 50px;
-  text-align: center;
-  color: #8e8e8e;
-  font-size: 13px;
-  position: absolute;
-}
-
-.signIn .footer ul {
-  text-align: center;
-}
-
-.signIn .footer ul li {
-  display: inline;
-  margin: 0px 5px;
-}

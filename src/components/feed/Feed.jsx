@@ -1,5 +1,6 @@
 import React from "react";
 import "./feed.css";
+import Footer from "../footer/Footer";
 
 const Feed = () => {
   return (
@@ -38,6 +39,7 @@ const Feed = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

@@ -11,6 +11,7 @@ import { faFaceSmile } from "@fortawesome/free-solid-svg-icons";
 import { faMicrophone } from "@fortawesome/free-solid-svg-icons";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import Footer from "../footer/Footer";
 
 const Massages = () => {
   //   const [message, setMessage] = useState("");
@@ -97,6 +98,7 @@ const Massages = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

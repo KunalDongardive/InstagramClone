@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./create.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhotoFilm } from "@fortawesome/free-solid-svg-icons";
+import Footer from "../footer/Footer";
 
 const Create = () => {
   const [image, setImage] = useState(null);
@@ -32,6 +33,7 @@ const Create = () => {
         </div>
         <input type="file" accept="image/*" onChange={handleImageUpload} />
       </div>
+      <Footer />
     </div>
   );
 };

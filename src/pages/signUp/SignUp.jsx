@@ -1,32 +1,47 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { UserContext } from "../../components/userContext/UserContext";
+import { useContext } from "react";
+// import { useState } from "react";
 import "./signUp.css";
-import { UserContext } from "../../components/contextprovider/UserContext";
-import { useState, useContext } from "react";
 import Footer from "../../components/footer/Footer";
 
 const SignUp = () => {
-  const [userData, setuserData] = useState({
-    name: "",
-    username: "",
-    email: "",
-    password: "",
-  });
-
-  const { signup } = useContext(UserContext); // Corrected context usage
   const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
+  // eslint-disable-next-line
+  // eslint-disable-next-line
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setuserData({ ...userData, [name]: value });
+  const emailRef = useRef();
+  const userName = useRef();
+  const name = useRef();
+  const passwordRef = useRef();
+
+  useEffect(() => {
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && emailRef.current === document.activeElement) {
+        handleStart();
+      }
+    });
+  }, []);
+
+  const handleStart = () => {
+    localStorage.setItem("email", emailRef.current.value);
+    localStorage.setItem("password", passwordRef.current.value);
+    localStorage.setItem("name", nameRef.current.value);
+    localStorage.setItem("userName", userNameRef.current.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleFinish = (e) => {
     e.preventDefault();
-    signup(userData);
+    setPassword(passwordRef.current.value);
+    localStorage.setItem("password", passwordRef.current.value);
     navigate("/signIn");
+    setUser(true);
   };
 
   return (
@@ -49,40 +64,29 @@ const SignUp = () => {
           </div>
         </div>
         <div className="container">
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="email"
-              placeholder="Mobile Number or Email"
-              value={userData.email}
-              onChange={handleChange}
-              required
-            />
+          <form>
+            <input type="text" name="email" ref={emailRef} />
             <input
               type="text"
               name="name"
               placeholder="Full Name"
-              value={userData.name}
-              onChange={handleChange}
-              required
+              ref={nameRef}
             />
             <input
               type="text"
               name="username"
               placeholder="Username"
-              value={userData.username}
-              onChange={handleChange}
-              required
+              ref={userNameRef}
             />
             <input
               type="password"
               name="password"
               placeholder="Password"
-              value={userData.password}
-              onChange={handleChange}
-              required
+              ref={passwordRef}
             />
-            <button type="submit">Sign up</button>
+            <button type="submit" onClick={handleFinish}>
+              Sign up
+            </button>
           </form>
 
           <p style={{ color: "#8e8e8e" }}>

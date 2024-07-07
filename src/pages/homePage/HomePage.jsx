@@ -27,18 +27,19 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { Link, Outlet } from "react-router-dom";
 import "./homePage.css";
-import Search from "../../components/search/Search";
-import Massages from "../../components/massages/Massages";
-import Notification from "../../components/notifications/Notification";
+// import Search from "../../components/search/Search";
+// import Massages from "../../components/massages/Massages";
+// import Notification from "../../components/notifications/Notification";
 import { UserContext } from "../../components/contextprovider/UserContext";
 import MenuBar from "../../components/menuBar/MenuBar";
+import Footer from "../../components/footer/Footer";
 
 const HomePage = () => {
-  const [isSearchClicked, setIsSearchClicked] = useState(false);
-  const [isMessagesClicked, setIsMessagesClicked] = useState(false);
-  const [isNotificationClicked, setIsNotificationClicked] = useState(false);
+  // const [isSearchClicked, setIsSearchClicked] = useState(false);
+  // const [isMessagesClicked, setIsMessagesClicked] = useState(false);
+  // const [isNotificationClicked, setIsNotificationClicked] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const { user, signout, signin } = useContext(UserContext);
+  const { signout, signin } = useContext(UserContext);
   const [showMenuBar2, setShowMenuBar2] = useState(false);
 
   const dropBox = () => {
@@ -272,7 +273,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="footer"></div>
+      <Footer />
     </div>
   );
 };

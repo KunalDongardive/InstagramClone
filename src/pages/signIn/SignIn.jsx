@@ -9,12 +9,12 @@ import Footer from "../../components/footer/Footer";
 const SignIn = () => {
   const { signin } = useContext(UserContext); // Corrected context usage
   const navigate = useNavigate();
-  const [userData, setuserData] = useState({ email: "", password: "" });
+  const [userData, setUserData] = useState({ email: "", password: "" });
   // const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setuserData({ ...userData, [name]: value });
+    setUserData({ ...userData, [name]: value });
   };
 
   const handleSubmit = (e) => {
@@ -22,6 +22,22 @@ const SignIn = () => {
     signin(userData);
     navigate("/home");
   };
+
+  // const { signin } = useContext(UserContext); // Corrected context usage
+  // const navigate = useNavigate();
+  // const [userData, setuserData] = useState({ email: "", password: "" });
+  // const [error, setError] = useState("");
+
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setuserData({ ...userData, [name]: value });
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   signin(userData);
+  //   navigate("/home");
+  // };
 
   return (
     <div className="signIn">

@@ -13,20 +13,23 @@ import Footer from "../../components/footer/Footer";
 const SignUp = () => {
   const navigate = useNavigate();
   const { setUser } = useContext(UserContext);
-  // eslint-disable-next-line
-  // eslint-disable-next-line
 
   const emailRef = useRef();
-  const userName = useRef();
-  const name = useRef();
+  const userNameRef = useRef();
+  const nameRef = useRef();
   const passwordRef = useRef();
 
   useEffect(() => {
-    document.addEventListener("keydown", (e) => {
+    const handleKeyDown = (e) => {
       if (e.key === "Enter" && emailRef.current === document.activeElement) {
         handleStart();
       }
-    });
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   const handleStart = () => {
@@ -38,11 +41,44 @@ const SignUp = () => {
 
   const handleFinish = (e) => {
     e.preventDefault();
-    setPassword(passwordRef.current.value);
+    localStorage.setItem("email", emailRef.current.value);
     localStorage.setItem("password", passwordRef.current.value);
-    navigate("/signIn");
+    localStorage.setItem("name", nameRef.current.value);
+    localStorage.setItem("userName", userNameRef.current.value);
     setUser(true);
+    navigate("/signIn");
   };
+
+  // const navigate = useNavigate();
+  // const { setUser } = useContext(UserContext);
+
+  // const emailRef = useRef();
+  // const userName = useRef();
+  // const name = useRef();
+  // const passwordRef = useRef();
+
+  // useEffect(() => {
+  //   document.addEventListener("keydown", (e) => {
+  //     if (e.key === "Enter" && emailRef.current === document.activeElement) {
+  //       handleStart();
+  //     }
+  //   });
+  // }, []);
+
+  // const handleStart = () => {
+  //   localStorage.setItem("email", emailRef.current.value);
+  //   localStorage.setItem("password", passwordRef.current.value);
+  //   localStorage.setItem("name", nameRef.current.value);
+  //   localStorage.setItem("userName", userNameRef.current.value);
+  // };
+
+  // const handleFinish = (e) => {
+  //   e.preventDefault();
+  //   setPassword(passwordRef.current.value);
+  //   localStorage.setItem("password", passwordRef.current.value);
+  //   navigate("/signIn");
+  //   setUser(true);
+  // };
 
   return (
     <div className="signUp">

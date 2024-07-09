@@ -85,7 +85,7 @@ const HomePage = () => {
                 <FontAwesomeIcon icon={faClapperboard} />
               </Link>
               <Link
-                to="/messages"
+                to="/massages"
                 className="menuItem"
                 onClick={() => handleMenuItemClick("messages")}
               >

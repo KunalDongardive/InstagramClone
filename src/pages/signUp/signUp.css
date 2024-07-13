@@ -1,4 +1,4 @@
-.signUp {
+.signUp .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,7 +6,7 @@
   border: 1px solid black;
 }
 
-.signUp .page {
+.signUp .container .page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,13 +18,13 @@
   padding: 10px 20px;
 }
 
-.signUp .page .header {
+.signUp .container .page .header {
   text-align: center;
   width: 100%;
   height: 40%;
 }
 
-.signUp .page .header button {
+.signUp .container .page .header button {
   width: inherit;
   font-size: 16px;
   padding: 8px 0px;
@@ -39,7 +39,7 @@
   border-radius: 5px;
 }
 
-.signUp .page .header .hline {
+.signUp .container .page .header .hline {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
@@ -48,28 +48,28 @@
   color: #8e8e8e;
 }
 
-.signUp .page .header .hline .line {
+.signUp .container .page .header .hline .line {
   height: 1px;
   width: 40%;
   background-color: rgb(209, 209, 209);
 }
 
-.signUp .page .container {
+.signUp .container .page .container {
   width: 100%;
   height: 60%;
   padding: 10px;
 }
 
-.signUp .page .container p {
+.signUp .container .page .container p {
   text-align: center;
 }
 
-.signUp .page .container form,
+.signUp .container .page .container form,
 input {
   width: inherit;
 }
 
-.signUp .page .container form input {
+.signUp .container .page .container form input {
   border: 1px solid #dbdbdb;
   background-color: #fafafa;
   padding: 10px 0px;
@@ -78,7 +78,7 @@ input {
   border-radius: 5px;
 }
 
-.signUp .page .container button {
+.signUp .container .page .container button {
   width: inherit;
   font-size: 14px;
   padding: 8px 0px;
@@ -93,7 +93,7 @@ input {
   border-radius: 5px;
 }
 
-.signUp .option {
+.signUp .container .option {
   height: 50px;
   width: 300px;
   border: 1px solid rgb(224, 224, 224);
@@ -102,16 +102,16 @@ input {
   text-align: center;
 }
 
-.signUp .otherApps {
+.signUp .container .otherApps {
   text-align: center;
   width: 280px;
 }
 
-.signUp .otherApps p {
+.signUp .container .otherApps p {
   font-size: 15px;
 }
 
-.signUp .otherApps .storeImg {
+.signUp .container .otherApps .storeImg {
   display: flex;
   justify-content: space-around;
 }

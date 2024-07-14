@@ -15,8 +15,8 @@ const SignUp = () => {
   const { setUser } = useContext(UserContext);
 
   const emailRef = useRef();
-  const userNameRef = useRef();
   const nameRef = useRef();
+  const userNameRef = useRef();
   const passwordRef = useRef();
 
   useEffect(() => {

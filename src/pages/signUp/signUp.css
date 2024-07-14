@@ -91,6 +91,7 @@ input {
   border: none;
   outline: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .signUp .container .option {
@@ -100,11 +101,13 @@ input {
   margin: 10px 0px;
   padding: 10px 20px;
   text-align: center;
+  cursor: pointer;
 }
 
 .signUp .container .otherApps {
   text-align: center;
   width: 280px;
+  cursor: pointer;
 }
 
 .signUp .container .otherApps p {

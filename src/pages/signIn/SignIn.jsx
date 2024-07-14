@@ -2,53 +2,69 @@ import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 import "./signIn.css";
-import { UserContext } from "../../components/contextprovider/UserContext";
+import { UserContext } from "../../components/userContext/UserContext";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 
 const SignIn = () => {
-  const { signin } = useContext(UserContext); // Corrected context usage
   const navigate = useNavigate();
-  const [userData, setUserData] = useState({ email: "", password: "" });
-  // const [error, setError] = useState("");
+  const { setUser } = useContext(UserContext);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setUserData({ ...userData, [name]: value });
+    if (name === "username") {
+      setUsername(value);
+    } else if (name === "password") {
+      setPassword(value);
+    }
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    signin(userData);
-    navigate("/home");
-  };
-
-  // const { signin } = useContext(UserContext); // Corrected context usage
-  // const navigate = useNavigate();
-  // const [userData, setuserData] = useState({ email: "", password: "" });
-  // const [error, setError] = useState("");
 
   // const handleChange = (e) => {
   //   const { name, value } = e.target;
-  //   setuserData({ ...userData, [name]: value });
+  //   setCredentials((prevCredentials) => ({
+  //     ...prevCredentials,
+  //     [name]: value,
+  //   }));
   // };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const storedUserName = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
+
+    if (storedUserName === username && storedPassword === password) {
+      setUser(true);
+      navigate("/home");
+    } else {
+      navigate("/signUp");
+    }
+  };
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
-  //   signin(userData);
-  //   navigate("/home");
+  //   const { username, password } = credentials;
+  //   const storedUserName = localStorage.getItem("username");
+  //   const storedPassword = localStorage.getItem("password");
+  //   if (storedUserName === username && storedPassword === password) {
+  //     navigate("/");
+  //     setUser(true);
+  //   } else {
+  //     navigate("/signUp");
+  //   }
   // };
 
   return (
     <div className="signIn">
       <div className="card">
-        <div className="top" onSubmit={handleSubmit}>
+        <div className="top">
           <h1>𝓘𝓷𝓼𝓽𝓪𝓰𝓻𝓪𝓶</h1>
           <input
             type="text"
-            name="email"
-            placeholder="Phone number, username or email"
-            value={userData.email}
+            name="username"
+            placeholder="Username"
+            value={username}
             onChange={handleChange}
             required
           />
@@ -56,11 +72,11 @@ const SignIn = () => {
             type="password"
             name="password"
             placeholder="Password"
-            value={userData.password}
+            value={password}
             onChange={handleChange}
             required
           />
-          <button type="submit" onClick={() => navigate("/home")}>
+          <button type="submit" onClick={handleSubmit}>
             Log in
           </button>
         </div>
@@ -86,7 +102,6 @@ const SignIn = () => {
           </p>
         </div>
       </div>
-      {/* {error && <p>{error}</p>} */}
       <div className="option">
         <p>
           Don't have an account?{" "}

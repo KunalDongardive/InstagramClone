@@ -1,18 +1,18 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,
   faMagnifyingGlass,
   faClapperboard,
-  faGear,
-  faChartLine,
   faBookmark,
-  faSun,
-  faCircleExclamation,
   faBars,
   faEllipsis,
   faShare,
   faComment,
+  faGear,
+  faChartLine,
+  faCircleExclamation,
+  faSun,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faCompass,
@@ -25,26 +25,16 @@ import {
   faThreads,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import "./homePage.css";
-// import Search from "../../components/search/Search";
-// import Massages from "../../components/massages/Massages";
-// import Notification from "../../components/notifications/Notification";
-import { UserContext } from "../../components/contextprovider/UserContext";
-import MenuBar from "../../components/menuBar/MenuBar";
 import Footer from "../../components/footer/Footer";
 
 const HomePage = () => {
-  // const [isSearchClicked, setIsSearchClicked] = useState(false);
-  // const [isMessagesClicked, setIsMessagesClicked] = useState(false);
-  // const [isNotificationClicked, setIsNotificationClicked] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const { signout, signin } = useContext(UserContext);
   const [showMenuBar2, setShowMenuBar2] = useState(false);
-
-  const dropBox = () => {
-    setIsOpen(!isOpen);
-  };
+  const navigate = useNavigate();
+  // eslint-disable-next-line
+  // const [logout, setLogout] = useState(false);
 
   const handleMenuItemClick = (menuItem) => {
     if (
@@ -58,10 +48,74 @@ const HomePage = () => {
     }
   };
 
+  const dropBox = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="home">
       <div className="page">
-        <MenuBar />
+        <div className="menuBar">
+          <div className="logo">
+            <h1>WELCOME, </h1>
+          </div>
+          <div className="menu">
+            <Link to="/post" className="menuItem">
+              <FontAwesomeIcon icon={faHouse} /> <p>Home</p>
+            </Link>
+            <Link
+              to="/search"
+              className="menuItem"
+              onClick={() => handleMenuItemClick("search")}
+            >
+              <FontAwesomeIcon icon={faMagnifyingGlass} /> <p>Search</p>
+            </Link>
+            <Link to="/feed" className="menuItem">
+              <FontAwesomeIcon icon={faCompass} /> <p>Explore</p>
+            </Link>
+            <Link to="/reels" className="menuItem">
+              <FontAwesomeIcon icon={faClapperboard} /> <p>Reels</p>
+            </Link>
+            <Link
+              to="/massages"
+              className="menuItem"
+              onClick={() => handleMenuItemClick("massages")}
+            >
+              <FontAwesomeIcon icon={faFacebookMessenger} /> <p>Messages</p>
+            </Link>
+            <Link
+              to="/notification"
+              className="menuItem"
+              onClick={() => handleMenuItemClick("notification")}
+            >
+              <FontAwesomeIcon icon={faHeart} /> <p>Notifications</p>
+            </Link>
+            <Link to="/create" className="menuItem">
+              <FontAwesomeIcon icon={faSquarePlus} /> <p>Create</p>
+            </Link>
+            <Link to="/profile" className="menuItem">
+              <img
+                src="./images/own.jpg"
+                alt=""
+                style={{
+                  height: "20px",
+                  width: "18px",
+                  objectFit: "contain",
+                  borderRadius: "50%",
+                }}
+              />
+              <p>Profile</p>
+            </Link>
+          </div>
+          <div className="menu-2">
+            <div className="menuItem">
+              <FontAwesomeIcon icon={faThreads} /> <p>Threads</p>
+            </div>
+            <div className="menuItem" onClick={dropBox}>
+              <FontAwesomeIcon icon={faBars} /> <p>More</p>
+            </div>
+          </div>
+        </div>
         {showMenuBar2 && (
           <div className="menuBar2">
             <div className="logo" style={{ fontSize: "30px" }}>
@@ -144,15 +198,16 @@ const HomePage = () => {
               Report a problem
             </div>
             <div className="line"></div>
-            <div className="drop-item" onClick={signin}>
+            <div className="drop-item" onClick={() => navigate("/signUp")}>
               Switch accounts
             </div>
             <div className="line2"></div>
-            <div className="drop-item" onClick={signout}>
+            <div className="drop-item" onClick={() => navigate("/signUp")}>
               Log out
             </div>
           </div>
         )}
+
         <div className="container">
           <Outlet />
           <div className="post">
